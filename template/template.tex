@@ -1,0 +1,161 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Deedy - One Page Two Column Resume
+% LaTeX Template
+% Version 1.2 (16/9/2014)
+%
+% Original author:
+% Debarghya Das (http://debarghyadas.com)
+%
+% Original repository:
+% https://github.com/deedydas/Deedy-Resume
+%
+% IMPORTANT: THIS TEMPLATE NEEDS TO BE COMPILED WITH XeLaTeX
+%
+% This template uses several fonts not included with Windows/Linux by
+% default. If you get compilation errors saying a font is missing, find the line
+% on which the font is used and either change it to a font included with your
+% operating system or comment the line out to use the default font.
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\documentclass[]{curriculum-vitae}
+\usepackage{fancyhdr}
+\usepackage{clrstrip}
+
+\pagestyle{fancy}
+\fancyhf{}
+ 
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     LAST UPDATED DATE
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \lastupdated
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     TITLE NAME
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\namesection
+    {<%= information.firstName %>}{<%= information.lastName %>}
+    {Software Development Engineer}
+    {
+        <%= information.location %>
+        \hspace{20pt}
+        \href{tel:<%= information.phoneNumber %>}{<%= information.phoneNumber %>}
+        \hspace{20pt}
+        \href{mailto:<%= information.email %>}{<%= information.email %>}
+        \hspace{20pt}
+        \href{https://github.com/<%= information.github %>}{github/<%= information.github %>}
+    }
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     COLUMN ONE
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{minipage}[t]{0.54\textwidth} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     EXPERIENCE
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Experience}
+<% workExperience.forEach((work, i) => { %>
+    \runsubsection{<%= work.company %>}
+    \descript{|\hspace{5pt}<%= work.jobTitle %>}
+    \location{<%= work.startDate %> – <%= work.endDate %> | <%= work.location %>}
+
+    <% if (i == 0) { %>
+    \vspace{\topsep} % Hacky fix for awkward extra vertical space
+    <% } %>
+
+    \begin{tightemize}
+    <%_ work.description.forEach(bulletPoint => { -%>
+        \item <%= bulletPoint %>
+    <%_ }) -%>
+    \end{tightemize}
+    \sectionsep
+<% }) %>
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     EDUCATION
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Education} 
+<% education.forEach((e, i) => { %>
+    \subsection{<%= e.awardingBody %>}
+    \runsubsection{<%= e.degree %>}
+
+    % <% if (i == 0) { %>
+    % \vspace{\topsep} % Hacky fix for awkward extra vertical space
+    % <% } %>
+
+    \location{<%= e.startDate %> - <%= e.endDate %> | <%= e.location %>}
+    <% if (e.gpa) { %>
+        GPA: <%= e.gpa %>
+    <% } %>
+    \sectionsep
+<% }) -%>
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     COLUMN TWO
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\end{minipage} 
+\hfill
+\begin{minipage}[t]{0.40\textwidth} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     SKILLS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Skills}
+<% Object.entries(skills).forEach(([skill, subSkills]) => { %>
+    \textbf{<%= skill %>}\hspace{5pt}
+    <%= subSkills.join(" \\textbullet{} ") %>
+    \vspace{2pt}
+<% }) -%>
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     PROJECTS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Projects \& Publications}
+<% projects.forEach((project, i) => { %>
+    \subsection{\href{<%- project.link %>}{<%= project.location %>}}
+    \location{\href{<%- project.link %>}{<%= project.name %>}}
+    \textbf{Technology} <%= project.technology.join(" / ") %>
+
+    <% if (i == 0) { %>
+    \vspace{\topsep} % Hacky fix for awkward extra vertical space
+    <% } %>
+
+    \begin{tightemize}
+    <%_ project.description.forEach(bulletPoint => { -%>
+    \item <%= bulletPoint %>
+    <%_ }) -%>
+    \end{tightemize}
+    \sectionsep
+<% }) %>
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     AWARDS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Leadership \& Awards} 
+<%_ awards.forEach((award, i) => { -%>
+    \subsection{<%= award.name %> - <%= award.date %>}
+    <%= award.description %>
+    \sectionsep
+<% }) %>
+
+\end{minipage} 
+\end{document}  \documentclass[]{article}

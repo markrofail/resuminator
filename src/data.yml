@@ -1,0 +1,127 @@
+information:
+    firstName: "Mark"
+    lastName: "Rofail"
+    jobTitle: "Software Development Engineer"
+    email: "markm.rofail@gmail.com"
+    phoneNumber: "+447455518922"
+    location: "London, UK"
+    github: "markrofail"
+
+workExperience:
+    - company: "Amazon"
+      startDate: "November 2022"
+      endDate: "Present"
+      location: "London, UK"
+      jobTitle: "Software Development Engineer II"
+      description:
+          - "Contributed to a successful transition from AWS EC2 to AWS Fargate (serverless architecture), resulting in a 22.7\\% increase in platform efficiency."
+          - "Identified and fixed potential memory leaks by architecturing an automated chaos-testing workflow."
+          - "Increased visibility into video-on-demand traffic by working on internal diagnostic tools, enabling on-calls root-cause problems faster."
+
+    - company: "GoCardless"
+      startDate: "October 2021"
+      endDate: "October 2022"
+      location: "London, UK"
+      jobTitle: "Software Development Engineer II"
+      description:
+          - "Led a team in integrating open-banking services to build fraud protection product."
+          - "Reduced fraudulent transactions by 15\\% by collaborating with cross-functional teams to implement machine learning models for fraud detection."
+          - "Spearheaded the design and implementation of a user-friendly Payment Intelligence dashboard, resulting in a 30\\% increase in user engagement."
+
+    - company: "Shahry"
+      startDate: "July 2020"
+      endDate: "September 2021"
+      location: "Cairo, EG"
+      jobTitle: "Junior Backend Engineer"
+      description:
+          - "Enhanced application security by transitioning to Knox tokens, achieving a seamless migration without any logout issues."
+          - "Launched in-store POS payment solutions by collaborating with a third-party provider in three external merchant chains."
+          - "Developed a microservice for third-party integrations, interfacing with the main monolithic service through RabbitMQ."
+
+    - company: "Informatica Middle East"
+      startDate: "June 2019"
+      endDate: "June 2020"
+      location: "Alexandria, EG"
+      jobTitle: "Junior Software Engineer"
+      description:
+          - "Enhanced a bank`s customer dashboard search functionality by implementing a bilingual search capability for an Arabic-English database."
+          - "Achieved a 4x improvement in pipeline performance by optimizing and compressing monthly E-statements post-generation."
+          - "Led the effort to create an internal HR portal, which resulted in a 20\\% reduction in HR paperwork processing time."
+
+education:
+    - awardingBody: "German University in Cairo"
+      degree: "BSc. Computer Science and Engineering"
+      startDate: "September 2014" 
+      endDate: "June 2019"
+      location: "Cairo, EG"
+      gpa: "3.9 / 4.0 | Highest Honors"
+
+skills:
+  Programming:
+    - "Java"
+    - "Typescript"
+    - "Python"
+
+  Frameworks:
+    - "Spring"
+    - "React"
+    - "Django"
+
+  Testing:
+    - "Mocha"
+    - "Jest"
+    - "Pytest"
+    - "Cypress"
+
+  Database:
+    - "PostgreSQL"
+    - "DynamoDB"
+
+publications:
+  - "Rofail, Mark, et al. “Multi-Modal Deep Learning for Vehicle Sensor Data Abstraction and Attack Detection.” 2019 IEEE International Conference on Vehicular Electronics and Safety (ICVES), IEEE, 2019, pp. 1–7."
+
+projects:
+  - name: "Multi-Modal Vehicle Attack Detection"
+    location: "ICVES Publication"
+    link: "https://ieeexplore.ieee.org/document/8906405"
+    technology:
+      - "Tensorflow"
+      - "Python"
+    description:
+      - "Simulated camera-based attacks by manipulating the camera input of an Autonomous Vehicle."
+      - "Ideated and developed a multi-modal module to identify alterations in the image sensor by cross-checking its congruence with the LiDAR sensor."
+
+  - name: "PostgreSQL Contributor"
+    location: "Google Summer of Code"
+    link: "https://www.postgresql.org/message-id/flat/CAJvoCut7zELHnBSC8HrM6p-R6q-NiBN1STKhqnK5fPE-9\\%3DGq3g\\%40mail.gmail.com"
+    technology:
+      - "C"
+      - "C++"
+    description:
+      - "Enabled GIN index-scan between AnyArray-AnyElement types by adding new polymorphic operators."
+      - "Enhanced the performance of update/delete queries from 25ms to 2ms by constructing a GIN index on the initial patch."
+
+awards:
+  - name: "Coding Sessions Facilitator"
+    date: "2022"
+    description: "Conducted bi-weekly Ruby coding challenge sessions for new hires."
+
+  - name: "Best Project in Hackathon"
+    date: "2022"
+    description: "Developed a Slack-bot to capture individual achievements to streamline referencing during performance evaluations."
+
+  - name: "Google Summer of Code Mentor"
+    date: "2021"
+    description: "Mentored student throughout their PostgreSQL project."
+
+  - name: "Bachelor Project Supervisor"
+    date: "2021"
+    description: "Supervised three undergraduate students in their bachelor projects."
+
+  # - name: "Hacktoberfest Award"
+  #   date: "2020"
+  #   description: "Completed four pull requests that were merged in October."
+
+  - name: "ICVES Best Paper Award"
+    date: "2019"
+    description: "Chosen as the top paper among 54 submissions."
