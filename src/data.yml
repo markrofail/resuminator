@@ -14,9 +14,9 @@ workExperience:
       location: "London, UK"
       jobTitle: "Software Development Engineer II"
       description:
-          - "Contributed to a successful transition from AWS EC2 to AWS Fargate (serverless architecture), resulting in a 22.7\\% increase in platform efficiency."
+          - "Contributed to a successful transition from AWS EC2 to AWS Fargate, resulting in a 22.7\\% increase in platform efficiency."
           - "Identified and fixed potential memory leaks by architecturing an automated chaos-testing workflow."
-          - "Increased visibility into video-on-demand traffic by working on internal diagnostic tools, enabling on-calls root-cause problems faster."
+          - "Enhanced video-on-demand traffic insights through improved diagnostic tools, reducing root-cause time for on-call engineers, by 10.4\\%."
 
     - company: "GoCardless"
       startDate: "October 2021"
@@ -25,8 +25,8 @@ workExperience:
       jobTitle: "Software Development Engineer II"
       description:
           - "Led a team in integrating open-banking services to build fraud protection product."
-          - "Reduced fraudulent transactions by 15\\% by collaborating with cross-functional teams to implement machine learning models for fraud detection."
-          - "Spearheaded the design and implementation of a user-friendly Payment Intelligence dashboard, resulting in a 30\\% increase in user engagement."
+          - "Slashed fraudulent transactions by 15\\% through cross-team collaboration, implementing machine learning models."
+          - "Led the creation of an intuitive Payment Intelligence dashboard, elevating user engagement by 30\\%."
 
     - company: "Shahry"
       startDate: "July 2020"
@@ -34,9 +34,9 @@ workExperience:
       location: "Cairo, EG"
       jobTitle: "Junior Backend Engineer"
       description:
-          - "Enhanced application security by transitioning to Knox tokens, achieving a seamless migration without any logout issues."
+          - "Strengthened application security through a seamless migration to Knox tokens without any logout incidents."
           - "Launched in-store POS payment solutions by collaborating with a third-party provider in three external merchant chains."
-          - "Developed a microservice for third-party integrations, interfacing with the main monolithic service through RabbitMQ."
+          - "Developed a microservice for third-party integrations, interfacing with the monolithic service through RabbitMQ."
 
     - company: "Informatica Middle East"
       startDate: "June 2019"
@@ -45,7 +45,7 @@ workExperience:
       jobTitle: "Junior Software Engineer"
       description:
           - "Enhanced a bank`s customer dashboard search functionality by implementing a bilingual search capability for an Arabic-English database."
-          - "Achieved a 4x improvement in pipeline performance by optimizing and compressing monthly E-statements post-generation."
+          - "Achieved a 4x improvement in pipeline performance by compressing monthly E-statements post-generation."
           # - "Created an internal HR portal, reducing paperwork processing time by 20\\%."
 
 education:
@@ -99,16 +99,16 @@ projects:
           - "C++"
       description:
           - "Enabled GIN index-scan between AnyArray-AnyElement types by adding new polymorphic operators."
-          - "Enhanced the performance of update/delete queries from 25ms to 2ms by constructing a GIN index on the initial patch."
+          - "Optimized query performance from 25ms to 2ms using a GIN index, compared to the original patch."
 
 awards:
-    - name: "Coding Sessions Facilitator"
+    - name: "Programming Workshops Facilitator"
       date: "2022"
       description: "Conducted bi-weekly Ruby coding challenge sessions for new hires."
 
-    - name: "Best Project in Hackathon"
-      date: "2022"
-      description: "Developed a Slack-bot to capture individual achievements to streamline referencing during performance evaluations."
+    # - name: "Best Hackathon Project"
+    #   date: "2022"
+    #   description: "Developed a Slack-bot to capture individual achievements to streamline referencing during performance evaluations."
 
     - name: "Google Summer of Code Mentor"
       date: "2021"

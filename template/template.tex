@@ -20,8 +20,6 @@
 
 
 \documentclass[]{curriculum-vitae}
-\usepackage{fancyhdr}
-\usepackage{clrstrip}
 
 \pagestyle{fancy}
 \fancyhf{}
@@ -152,10 +150,11 @@
 
 \section{Leadership \& Awards} 
 <%_ awards.forEach((award, i) => { -%>
-    \subsection{<%= award.name %> - <%= award.date %>}
-    <%= award.description %>
+    \runsubsection{<%= award.name %>}, <%= award.date %>\\
+    {\fontsize{10}{12}\selectfont <%= award.description %>}\\
     \sectionsep
 <% }) %>
 
 \end{minipage} 
-\end{document}  \documentclass[]{article}
+\end{document}  
+\documentclass[]{article}

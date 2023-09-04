@@ -11,6 +11,11 @@
 % Package Imports
 \usepackage[hmargin=1.25cm, vmargin=0.75cm]{geometry}
 \usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage{clrstrip}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{fontspec}
 
 % Publications
 \usepackage{cite}
@@ -24,35 +29,37 @@
 \definecolor{subheadings}{HTML}{333333}
 
 % Set main fonts
-\usepackage{fontspec}
-\setmainfont[Color=primary, Path = fonts/lato/,BoldItalicFont=Lato-RegIta,BoldFont=Lato-Reg,ItalicFont=Lato-LigIta]{Lato-Lig}
-\setsansfont[Scale=MatchLowercase,Mapping=tex-text, Path = fonts/raleway/]{Raleway-ExtraLight}
+\defaultfontfeatures{Mapping=tex-text}
+\setmainfont[Color=primary]{Helvetica Light}
+\setsansfont[Scale=MatchLowercase,Mapping=tex-text]{Helvetica Neue UltraLight}
 
 % Date command
 \usepackage[absolute]{textpos}
 \usepackage[UKenglish]{isodate}
 \setlength{\TPHorizModule}{1mm}
 \setlength{\TPVertModule}{1mm}
-\newcommand{\lastupdated}{\begin{textblock}{60}(155,5)
-\color{date}\fontspec[Path = fonts/raleway/]{Raleway-ExtraLight}\fontsize{8pt}{10pt}\selectfont 
-Last Updated on \today
+\textblockorigin{0mm}{5mm}
+\newcommand{\lastupdated}{\begin{textblock}{60}(155,0)
+\color{date}\fontspec{Helvetica Neue Light}\fontsize{8pt}{10pt}\selectfont 
+Last Updated on
+\today
 \end{textblock}}
 
 % Name command
 \newcommand{\namesection}[4]{
 \raggedright{
   \color{headings}
-  \fontsize{32pt}{60pt}
-  \fontspec[Path = fonts/lato/]{Lato-Lig}\selectfont #1 
-  \fontspec[Path = fonts/lato/]{Lato-Lig}\selectfont #2
+  \sffamily
+  \fontspec{Helvetica Neue UltraLight}\fontsize{40pt}{10cm}\selectfont #1 
+  \fontspec{Helvetica Neue UltraLight}\selectfont #2
   \\
   \vspace{10pt}
-  \fontspec[Path = fonts/lato/]{Lato-Reg}\fontsize{11pt}{14pt}\selectfont #3
+  \fontspec{Heiti TC Medium}\fontsize{11pt}{14pt}\selectfont #3
   } \\[5pt]
 \raggedright{
   \begin{colorstrip}{black}[inner=10pt]
     \color{white}
-    \fontspec[Path = fonts/lato/]{Lato-Reg}\fontsize{11pt}{14pt}\selectfont #4
+    \fontspec{Heiti TC Medium}\fontsize{11pt}{14pt}\selectfont #4
   \end{colorstrip}
     
   % \noindent\makebox[\linewidth]{\color{headings}\rule{\paperwidth}{0.4pt}}
@@ -61,29 +68,28 @@ Last Updated on \today
 }
 
 % Section seperators 
-\usepackage{titlesec}
-\titlespacing{\section}{0pt}{0pt}{0pt} 
-\titlespacing{\subsection}{0pt}{0pt}{0pt}
-\newcommand{\sectionsep}{\vspace{8pt}}
+\titlespacing{\subsection}{0pt}{\parskip}{-\parskip}
+\titlespacing{\subsubsection}{0pt}{\parskip}{-\parskip}
 
 % Headings command
 \titleformat{\section}{\color{headings}
-\scshape\fontspec[Path = fonts/lato/]{Lato-Bol}\fontsize{16pt}{24pt}\selectfont \raggedright\uppercase}{}{0em}{}
+\scshape\fontspec{Helvetica Light}\fontsize{16pt}{24pt}\selectfont \raggedright\uppercase}{} {0em}{}
 
 % Subeadings command
-\titleformat{\subsection}{
-\color{subheadings}\fontspec[Path = fonts/lato/]{Lato-Reg}\fontsize{12pt}{12pt}\selectfont\bfseries}{}{0em}{}
+\titleformat{\subsection}{\color{subheadings}
+\fontspec{Helvetica}\fontsize{12pt}{12pt}\selectfont\bfseries\uppercase}{}{0em}{}
 
-\newcommand{\runsubsection}[1]{
-\color{subheadings}\fontspec[Path = fonts/lato/]{Lato-Reg}\fontsize{12pt}{12pt}\selectfont\bfseries {#1} \normalfont}
+\newcommand{\runsubsection}[1]{\color{subheadings}
+\fontspec{Helvetica}\fontsize{12pt}{12pt}\selectfont\bfseries\uppercase {#1} \normalfont}
 
 % Descriptors command
-\newcommand{\descript}[1]{
-\color{subheadings}\raggedright\scshape\fontspec[Path = fonts/lato/]{Lato-Reg}\fontsize{11pt}{13pt}\selectfont {#1 \\} \normalfont}
+\newcommand{\descript}[1]{\color{subheadings}\raggedright\scshape\fontspec{Heiti SC Medium}\fontsize{11pt}{13pt}\selectfont {#1 \\} \normalfont}
 
 % Location command
-\newcommand{\location}[1]{
-\color{headings}\raggedright\fontspec[Path = fonts/lato/]{Lato-Reg}\fontsize{10pt}{12pt}\selectfont {#1\\} \normalfont}
+\newcommand{\location}[1]{\color{headings}\raggedright\scshape\fontspec{Heiti TC Medium}\fontsize{10pt}{12pt}\selectfont {#1\\} \normalfont}
+
+% Section seperators command
+\newcommand{\sectionsep}[0]{\vspace{8pt}}
 
 % Bullet Lists with fewer gaps command
 \newenvironment{tightemize}{
