@@ -6,3 +6,7 @@ node_modules
 # Latex
 output.*
 !output.pdf
+*.log
+*.aux
+*.fls
+*.fdb_latexmk

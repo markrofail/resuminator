@@ -67,9 +67,9 @@
 
 \section{Experience}
 <% workExperience.forEach((work, i) => { %>
-    \runsubsection{<%= work.company %>}
-    \descript{|\hspace{5pt}<%= work.jobTitle %>}
-    \location{<%= work.startDate %> – <%= work.endDate %> | <%= work.location %>}
+    \runsubsection{<%= work.jobTitle %>\\}
+    \descript{<%= work.company %>, <%= work.location %>}
+    \location{<%= work.startDate %> – <%= work.endDate %>}
 
     <% if (i == 0) { %>
     \vspace{\topsep} % Hacky fix for awkward extra vertical space
