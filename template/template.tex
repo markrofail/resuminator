@@ -73,11 +73,13 @@
     \vspace{\topsep} % Hacky fix for awkward extra vertical space
     <% } %>
 
+    <% if (work.description) { %>
     \begin{tightemize}
     <%_ work.description.forEach(bulletPoint => { -%>
         \item <%= bulletPoint %>
     <%_ }) -%>
     \end{tightemize}
+    <% } %>
     \sectionsep
 <% }) %>
 
@@ -150,7 +152,7 @@
 
 \section{Leadership \& Awards} 
 <%_ awards.forEach((award, i) => { -%>
-    \runsubsection{<%= award.name %>}, <%= award.date %>\\
+    \runsubsection{<%= award.name -%>}, <%= award.date %>\\
     {\fontsize{10}{12}\selectfont <%= award.description %>}\\
     \sectionsep
 <% }) %>

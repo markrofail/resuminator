@@ -14,6 +14,7 @@ workExperience:
       location: "London, UK"
       jobTitle: "Software Development Engineer II"
       description:
+          - "Led the ads support project for primevideo.com, working with UX to implement the frontend and coordinating with different backend services."
           - "Contributed to a successful transition from AWS EC2 to AWS Fargate, resulting in a 22.7\\% increase in platform efficiency."
           - "Identified and fixed potential memory leaks by architecturing an automated chaos-testing workflow."
           - "Enhanced video-on-demand traffic insights through improved diagnostic tools, reducing root-cause time for on-call engineers, by 10.4\\%."
@@ -44,8 +45,8 @@ workExperience:
       location: "Alexandria, EG"
       jobTitle: "Junior Software Engineer"
       description:
-          - "Enhanced a bank`s customer dashboard search functionality by implementing a bilingual search capability for an Arabic-English database."
-          - "Achieved a 4x improvement in pipeline performance by compressing monthly E-statements post-generation."
+          # - "Enhanced a bank`s customer dashboard search functionality by implementing a bilingual search capability for an Arabic-English database."
+          # - "Achieved a 4x improvement in pipeline performance by compressing monthly E-statements post-generation."
           # - "Created an internal HR portal, reducing paperwork processing time by 20\\%."
 
 education:
