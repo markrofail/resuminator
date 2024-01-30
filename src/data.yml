@@ -14,10 +14,13 @@ workExperience:
       location: "London, UK"
       jobTitle: "Software Development Engineer II"
       description:
-          - "Led the ads support project for primevideo.com, working with UX to implement the frontend and coordinating with different backend services."
-          - "Contributed to a successful transition from AWS EC2 to AWS Fargate, resulting in a 22.7\\% increase in platform efficiency."
-          - "Identified and fixed potential memory leaks by architecturing an automated chaos-testing workflow."
-          - "Enhanced video-on-demand traffic insights through improved diagnostic tools, reducing root-cause time for on-call engineers, by 10.4\\%."
+          - "Spearheaded the primevideo.com Ads project, working with cross-functional teams to orchestrate required changes across numerous microservices using feature flags."
+          - "Executed primevideo.com detail page redesign, coordinating with product and UX teams to deliver a customer-centric experience."
+          - "Ideated a chrome-extension for on-call engineers that enhances debugging and offers insights into website traffic, thereby streamlining incident resolution."
+          - "Actively engaged in a comprehensive on-call rotation, providing critical support and maintenance for the primevideo.com website."
+          # - "Contributed to a successful transition from AWS EC2 to AWS Fargate, resulting in a 22.7\\% increase in platform efficiency."
+          # - "Identified and fixed potential memory leaks by architecturing an automated chaos-testing workflow."
+          # - "Enhanced video-on-demand traffic insights through improved diagnostic tools, reducing root-cause time for on-call engineers, by 10.4\\%."
 
     - company: "GoCardless"
       startDate: "October 2021"
@@ -25,9 +28,9 @@ workExperience:
       location: "London, UK"
       jobTitle: "Software Development Engineer II"
       description:
-          - "Led a team in integrating open-banking services to build fraud protection product."
-          - "Slashed fraudulent transactions by 15\\% through cross-team collaboration, implementing machine learning models."
-          - "Led the creation of an intuitive Payment Intelligence dashboard, elevating user engagement by 30\\%."
+          - "Supervised and contributed to developing a fraud prevention tool tailored for merchants, leveraging open-banking service integrations."
+          - "Implemented and deployed a machine-learning server to oversee direct-debit transactions, achieving a 15\\% reduction in fraudulent payments."
+          - "Engineered a sophisticated payment intelligence dashboard, empowering merchants to tailor fraud checks, balancing customer experience and fraud protection."
 
     - company: "Shahry"
       startDate: "July 2020"
@@ -35,9 +38,9 @@ workExperience:
       location: "Cairo, EG"
       jobTitle: "Junior Backend Engineer"
       description:
-          - "Strengthened application security through a seamless migration to Knox tokens without any logout incidents."
-          - "Launched in-store POS payment solutions by collaborating with a third-party provider in three external merchant chains."
-          - "Developed a microservice for third-party integrations, interfacing with the monolithic service through RabbitMQ."
+          - "Migrated customer`s user tokens to Knox tokens seamlessly, increasing API-Application security without causing any logout incidents by updating database-stored in-use tokens."
+          # - "Launched in-store POS payment solutions by collaborating with a third-party provider in three external merchant chains."
+          - "Created a specialized microservice for third-party integrations to limit monolith service deployments when making vendor-specific changes."
 
     - company: "Informatica Middle East"
       startDate: "June 2019"
@@ -84,26 +87,26 @@ publications:
 projects:
     - name: "Multi-Modal Vehicle Attack Detection"
       location: "ICVES Publication"
-      link: "https://ieeexplore.ieee.org/document/8906405"
+      link: "https://ieeexplore.ieee.org/abstract/document/8906405"
       technology:
           - "Tensorflow"
           - "Python"
       description:
-          - "Simulated camera-based attacks by manipulating the camera input of an Autonomous Vehicle."
-          - "Ideated and developed a multi-modal module to identify alterations in the image sensor by cross-checking its congruence with the LiDAR sensor."
+          - "Simulated camera-based attacks by manipulating the vehicle`s camera feed."
+          - "Manufactured a multi-modal module to identify discrepancies between the vehicle`s image and LiDAR sensors."
 
     - name: "PostgreSQL Contributor"
       location: "Google Summer of Code"
-      link: "https://www.postgresql.org/message-id/flat/CAJvoCut7zELHnBSC8HrM6p-R6q-NiBN1STKhqnK5fPE-9\\%3DGq3g\\%40mail.gmail.com"
+      link: "https://www.postgresql.org/message-id/CAJvoCut7zELHnBSC8HrM6p-R6q-NiBN1STKhqnK5fPE-9%3DGq3g%40mail.gmail.com"
       technology:
           - "C"
           - "C++"
       description:
-          - "Enabled GIN index-scan between AnyArray-AnyElement types by adding new polymorphic operators."
-          - "Optimized query performance from 25ms to 2ms using a GIN index, compared to the original patch."
+          - "Enabled GIN index-scan between polymorphic array types by adding new operators."
+          - "Optimized query performance from 25ms to 2ms using a GIN index, compared to the original work."
 
 awards:
-    - name: "Programming Workshops Facilitator"
+    - name: "Code Challenge Workshops"
       date: "2022"
       description: "Conducted bi-weekly Ruby coding challenge sessions for new hires."
 
@@ -111,7 +114,7 @@ awards:
     #   date: "2022"
     #   description: "Developed a Slack-bot to capture individual achievements to streamline referencing during performance evaluations."
 
-    - name: "Google Summer of Code Mentor"
+    - name: "Google GSOC Mentor"
       date: "2021"
       description: "Mentored student throughout their PostgreSQL project."
 
@@ -119,10 +122,10 @@ awards:
       date: "2021"
       description: "Supervised three undergraduate students in their bachelor projects."
 
-    # - name: "Hacktoberfest Award"
-    #   date: "2020"
-    #   description: "Completed four pull requests that were merged in October."
+    - name: "Hacktoberfest Award"
+      date: "2020"
+      description: "Successfully made for open-source contributions during October."
 
     - name: "ICVES Best Paper Award"
       date: "2019"
-      description: "Chosen as the top paper among 54 submissions."
+      description: "Selected as the best paper out of 54 submissions."

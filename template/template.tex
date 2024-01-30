@@ -42,13 +42,13 @@
     {<%= information.firstName %>}{<%= information.lastName %>}
     {Software Development Engineer}
     {
-        <%= information.location %>
+        \faMapMarker*\hspace{6pt}<%= information.location %>
         \hspace{20pt}
-        \href{tel:<%= information.phoneNumber %>}{<%= information.phoneNumber %>}
+        \href{tel:<%= information.phoneNumber %>}{\faPhone*\hspace{2pt}<%= information.phoneNumber %>}
         \hspace{20pt}
-        \href{mailto:<%= information.email %>}{<%= information.email %>}
+        \href{mailto:<%= information.email %>}{\faEnvelope\hspace{6pt}<%= information.email %>}
         \hspace{20pt}
-        \href{https://github.com/<%= information.github %>}{github/<%= information.github %>}
+        \href{https://github.com/<%= information.github %>}{\faGithub\hspace{6pt}github/<%= information.github %>}
     }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -118,21 +118,23 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{Skills}
-<% Object.entries(skills).forEach(([skill, subSkills]) => { %>
-    \textbf{<%= skill %>}\hspace{5pt}
-    <%= subSkills.join(" \\textbullet{} ") %>
-    \vspace{2pt}
-<% }) -%>
+
+\begin{tabular}{ll}
+    <% Object.entries(skills).forEach(([skill, subSkills]) => { %>
+    \textbf{<%= skill %>} & <%= subSkills.join(", ") %> \\
+    <% }) -%>
+\end{tabular}
+\sectionsep
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %     PROJECTS
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{Projects \& Publications}
+\vspace{-6pt}
 <% projects.forEach((project, i) => { %>
-    \subsection{\href{<%- project.link %>}{<%= project.location %>}}
-    \location{\href{<%- project.link %>}{<%= project.name %>}}
-    \textbf{Technology} <%= project.technology.join(" / ") %>
+    \href{<%- project.link %>}{\subsection{<%= project.location %>}\location{<%= project.name %> \small\faExternalLink*}}
+    \textbf{Technology} <%= project.technology.join(", ") %>
 
     <% if (i == 0) { %>
     \vspace{\topsep} % Hacky fix for awkward extra vertical space
@@ -143,8 +145,8 @@
     \item <%= bulletPoint %>
     <%_ }) -%>
     \end{tightemize}
-    \sectionsep
 <% }) %>
+\sectionsep
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %     AWARDS
@@ -152,8 +154,11 @@
 
 \section{Leadership \& Awards} 
 <%_ awards.forEach((award, i) => { -%>
-    \runsubsection{<%= award.name -%>}, <%= award.date %>\\
-    {\fontsize{10}{12}\selectfont <%= award.description %>}\\
+    \runsubsection{<%= award.name -%>}\\
+    \location{<%= award.date %>}
+
+    <%= award.description %>
+
     \sectionsep
 <% }) %>
 

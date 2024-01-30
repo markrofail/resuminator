@@ -16,6 +16,7 @@
 \usepackage{enumitem}
 \usepackage{titlesec}
 \usepackage{fontspec}
+\usepackage{fontawesome5}
 
 % Publications
 \usepackage{cite}
@@ -68,6 +69,7 @@ Last Updated on
 }
 
 % Section seperators 
+\titlespacing*{\section}{0pt}{0.1\baselineskip}{0.2\baselineskip}
 \titlespacing{\subsection}{0pt}{\parskip}{-\parskip}
 \titlespacing{\subsubsection}{0pt}{\parskip}{-\parskip}
 
