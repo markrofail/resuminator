@@ -17,6 +17,7 @@
 \usepackage{titlesec}
 \usepackage{fontspec}
 \usepackage{fontawesome5}
+\usepackage[default,scale=0.95]{opensans}
 
 % Publications
 \usepackage{cite}
@@ -29,11 +30,6 @@
 \definecolor{headings}{HTML}{000000}
 \definecolor{subheadings}{HTML}{333333}
 
-% Set main fonts
-\defaultfontfeatures{Mapping=tex-text}
-\setmainfont[Color=primary]{Helvetica}
-\setsansfont[Scale=MatchLowercase,Mapping=tex-text]{Helvetica Neue}
-
 % Date command
 \usepackage[absolute]{textpos}
 \usepackage[UKenglish]{isodate}
@@ -41,7 +37,7 @@
 \setlength{\TPVertModule}{1mm}
 \textblockorigin{0mm}{5mm}
 \newcommand{\lastupdated}{\begin{textblock}{60}(155,0)
-\color{date}\fontspec{Helvetica Neue Light}\fontsize{10pt}{10pt}\selectfont 
+\color{date}\fontsize{10pt}{10pt}\selectfont
 Last Updated on
 \today
 \end{textblock}}
@@ -50,16 +46,15 @@ Last Updated on
 \newcommand{\namesection}[4]{
 \raggedright{
   \color{headings}
-  \sffamily
-  \fontspec{Helvetica Light}\fontsize{40pt}{10cm}\selectfont #1  
-  \fontspec{Helvetica Light}\selectfont #2
+  \fontsize{40pt}{10cm}\selectfont #1 #2
   % \hfill
-  % \fontspec{Helvetica}\fontsize{11pt}{14pt}\selectfont #3 
+  % \fontsize{11pt}{14pt}\selectfont #3 
+  \vspace{6pt}
   } 
 \raggedright{
   \begin{colorstrip}{black}[inner=8pt]
     \color{white}
-    \fontspec{Helvetica}\fontsize{11pt}{14pt}\selectfont #4
+    \fontsize{11pt}{14pt}\selectfont #4
   \end{colorstrip}
   }
 }
@@ -71,20 +66,20 @@ Last Updated on
 
 % Headings command
 \titleformat{\section}{\color{headings}
-\scshape\fontspec{Helvetica Light}\fontsize{16pt}{24pt}\selectfont \raggedright}{} {0em}{}
+\scshape\fontsize{16pt}{24pt}\selectfont \raggedright}{} {0em}{}
 
 % Subeadings command
 \titleformat{\subsection}{\color{subheadings}
-\fontspec{Helvetica}\fontsize{12pt}{12pt}\selectfont\bfseries\uppercase}{}{0em}{}
+\fontsize{12pt}{12pt}\selectfont\bfseries\uppercase}{}{0em}{}
 
 \newcommand{\runsubsection}[1]{\color{subheadings}
-\fontspec{Helvetica}\fontsize{12pt}{12pt}\selectfont\bfseries {#1} \normalfont}
+\fontsize{12pt}{12pt}\selectfont\bfseries {#1} \normalfont}
 
 % Descriptors command
-\newcommand{\descript}[1]{\color{subheadings}\raggedright\scshape\fontspec{Helvetica}\fontsize{11pt}{13pt}\selectfont {#1 \\} \normalfont}
+\newcommand{\descript}[1]{\color{subheadings}\raggedright\scshape\fontsize{11pt}{13pt}\selectfont {#1 \\} \normalfont}
 
 % Location command
-\newcommand{\location}[1]{\color{headings}\raggedright\scshape\fontspec{Helvetica}\fontsize{10pt}{12pt}\selectfont {#1\\} \normalfont}
+\newcommand{\location}[1]{\color{headings}\raggedright\scshape\fontsize{10pt}{12pt}\selectfont {#1\\} \normalfont}
 
 % Section seperators command
 \newcommand{\sectionsep}[0]{\vspace{8pt}}
