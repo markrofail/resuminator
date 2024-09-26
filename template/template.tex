@@ -125,7 +125,7 @@
 \vspace{-6pt}
 \section{Skills}
 
-\begin{tabular}{p{0.26\linewidth} p{0.7\linewidth}}
+\begin{tabular}{ll}
         <% Object.entries(skills).forEach(([skill, subSkills]) => { %>
     \textbf{<%= skill %>} & <%= subSkills.join(", ") %> \\
     <% }) -%>
@@ -140,7 +140,7 @@
 \section{Projects \& Publications}
 <% projects.forEach((project, i) => { %>
     \href{<%- project.link %>}{\runsubsection{<%= project.location %>} \\ \location{<%= project.name %> \small\faExternalLink*}}
-    \textbf{Technology} <%= project.technology.join(", ") %>
+    Technologies: <%= project.technology.join(", ") %>
 
     <% if (i == 0) { %>
     \vspace{\topsep} % Hacky fix for awkward extra vertical space
