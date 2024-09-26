@@ -44,9 +44,9 @@
     {
         \faMapMarker*\hspace{6pt}<%= information.location %>
         \hspace{20pt}
-        \href{tel:<%= information.phoneNumber %>}{\faPhone*\hspace{2pt}<%= information.phoneNumber %>}
-        \hspace{20pt}
         \href{mailto:<%= information.email %>}{\faEnvelope\hspace{6pt}<%= information.email %>}
+        \hspace{20pt}
+        \href{https://www.linkedin.com/in/<%= information.linkedin %>}{\faLinkedin\hspace{6pt}linkedin/<%= information.linkedin %>}
         \hspace{20pt}
         \href{https://github.com/<%= information.github %>}{\faGithub\hspace{6pt}github/<%= information.github %>}
     }
@@ -57,7 +57,7 @@
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{minipage}[t]{0.54\textwidth} 
+\begin{minipage}[t]{0.56\textwidth} 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %     EXPERIENCE
@@ -65,9 +65,13 @@
 
 \section{Experience}
 <% workExperience.forEach((work, i) => { %>
-    \runsubsection{<%= work.jobTitle %>\\}
-    \descript{<%= work.company %>, <%= work.location %>}
-    \location{<%= work.startDate %> – <%= work.endDate %>}
+    \runsubsection{<%= work.jobTitle %>} \\
+    \descript{<%= work.company %>}
+
+    <%= work.startDate %> – <%= work.endDate %>
+    \hfill
+    <%= work.location %>
+    \hspace{10pt} 
 
     <% if (i == 0) { %>
     \vspace{\topsep} % Hacky fix for awkward extra vertical space
@@ -84,26 +88,6 @@
 <% }) %>
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%     EDUCATION
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\section{Education} 
-<% education.forEach((e, i) => { %>
-    \subsection{<%= e.awardingBody %>}
-    \runsubsection{<%= e.degree %>}
-
-    % <% if (i == 0) { %>
-    % \vspace{\topsep} % Hacky fix for awkward extra vertical space
-    % <% } %>
-
-    \location{<%= e.startDate %> - <%= e.endDate %> | <%= e.location %>}
-    <% if (e.gpa) { %>
-        GPA: <%= e.gpa %>
-    <% } %>
-    \sectionsep
-<% }) -%>
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
 %     COLUMN TWO
 %
@@ -111,16 +95,38 @@
 
 \end{minipage} 
 \hfill
-\begin{minipage}[t]{0.40\textwidth} 
+\begin{minipage}[t]{0.4\textwidth} 
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     EDUCATION
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Education} 
+<% education.forEach((e, i) => { %>
+    \runsubsection{<%= e.degree %>} \\
+    <%= e.awardingBody %>
+
+    % <% if (i == 0) { %>
+    % \vspace{\topsep} % Hacky fix for awkward extra vertical space
+    % <% } %>
+
+    \location{<%= e.startDate %> - <%= e.endDate %> \hfill <%= e.location %>}
+    <% if (e.gpa) { %>
+        GPA: <%= e.gpa %> \hfill <%= e.honors %>
+    <% } %>
+    \sectionsep
+<% }) -%>
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %     SKILLS
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+\vspace{-6pt}
 \section{Skills}
 
-\begin{tabular}{ll}
-    <% Object.entries(skills).forEach(([skill, subSkills]) => { %>
+\begin{tabular}{p{0.26\linewidth} p{0.7\linewidth}}
+        <% Object.entries(skills).forEach(([skill, subSkills]) => { %>
     \textbf{<%= skill %>} & <%= subSkills.join(", ") %> \\
     <% }) -%>
 \end{tabular}
@@ -130,10 +136,10 @@
 %     PROJECTS
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\section{Projects \& Publications}
 \vspace{-6pt}
+\section{Projects \& Publications}
 <% projects.forEach((project, i) => { %>
-    \href{<%- project.link %>}{\subsection{<%= project.location %>}\location{<%= project.name %> \small\faExternalLink*}}
+    \href{<%- project.link %>}{\runsubsection{<%= project.location %>} \\ \location{<%= project.name %> \small\faExternalLink*}}
     \textbf{Technology} <%= project.technology.join(", ") %>
 
     <% if (i == 0) { %>
@@ -152,10 +158,10 @@
 %     AWARDS
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+\vspace{-6pt}
 \section{Leadership \& Awards} 
 <%_ awards.forEach((award, i) => { -%>
-    \runsubsection{<%= award.name -%>}\\
-    \location{<%= award.date %>}
+    \runsubsection{<%= award.name -%>} - \location{<%= award.date %>}
 
     <%= award.description %>
 

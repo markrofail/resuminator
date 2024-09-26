@@ -31,8 +31,8 @@
 
 % Set main fonts
 \defaultfontfeatures{Mapping=tex-text}
-\setmainfont[Color=primary]{Helvetica Light}
-\setsansfont[Scale=MatchLowercase,Mapping=tex-text]{Helvetica Neue UltraLight}
+\setmainfont[Color=primary]{Helvetica}
+\setsansfont[Scale=MatchLowercase,Mapping=tex-text]{Helvetica Neue}
 
 % Date command
 \usepackage[absolute]{textpos}
@@ -41,7 +41,7 @@
 \setlength{\TPVertModule}{1mm}
 \textblockorigin{0mm}{5mm}
 \newcommand{\lastupdated}{\begin{textblock}{60}(155,0)
-\color{date}\fontspec{Helvetica Neue Light}\fontsize{8pt}{10pt}\selectfont 
+\color{date}\fontspec{Helvetica Neue Light}\fontsize{10pt}{10pt}\selectfont 
 Last Updated on
 \today
 \end{textblock}}
@@ -51,20 +51,16 @@ Last Updated on
 \raggedright{
   \color{headings}
   \sffamily
-  \fontspec{Helvetica Neue UltraLight}\fontsize{40pt}{10cm}\selectfont #1 
-  \fontspec{Helvetica Neue UltraLight}\selectfont #2
-  \\
-  \vspace{10pt}
-  \fontspec{Heiti TC Medium}\fontsize{11pt}{14pt}\selectfont #3
-  } \\[5pt]
+  \fontspec{Helvetica Light}\fontsize{40pt}{10cm}\selectfont #1  
+  \fontspec{Helvetica Light}\selectfont #2
+  % \hfill
+  % \fontspec{Helvetica}\fontsize{11pt}{14pt}\selectfont #3 
+  } 
 \raggedright{
-  \begin{colorstrip}{black}[inner=10pt]
+  \begin{colorstrip}{black}[inner=8pt]
     \color{white}
-    \fontspec{Heiti TC Medium}\fontsize{11pt}{14pt}\selectfont #4
+    \fontspec{Helvetica}\fontsize{11pt}{14pt}\selectfont #4
   \end{colorstrip}
-    
-  % \noindent\makebox[\linewidth]{\color{headings}\rule{\paperwidth}{0.4pt}}
-  \vspace{15pt}
   }
 }
 
@@ -75,20 +71,20 @@ Last Updated on
 
 % Headings command
 \titleformat{\section}{\color{headings}
-\scshape\fontspec{Helvetica Light}\fontsize{16pt}{24pt}\selectfont \raggedright\uppercase}{} {0em}{}
+\scshape\fontspec{Helvetica Light}\fontsize{16pt}{24pt}\selectfont \raggedright}{} {0em}{}
 
 % Subeadings command
 \titleformat{\subsection}{\color{subheadings}
 \fontspec{Helvetica}\fontsize{12pt}{12pt}\selectfont\bfseries\uppercase}{}{0em}{}
 
 \newcommand{\runsubsection}[1]{\color{subheadings}
-\fontspec{Helvetica}\fontsize{12pt}{12pt}\selectfont\bfseries\uppercase {#1} \normalfont}
+\fontspec{Helvetica}\fontsize{12pt}{12pt}\selectfont\bfseries {#1} \normalfont}
 
 % Descriptors command
-\newcommand{\descript}[1]{\color{subheadings}\raggedright\scshape\fontspec{Heiti SC Medium}\fontsize{11pt}{13pt}\selectfont {#1 \\} \normalfont}
+\newcommand{\descript}[1]{\color{subheadings}\raggedright\scshape\fontspec{Helvetica}\fontsize{11pt}{13pt}\selectfont {#1 \\} \normalfont}
 
 % Location command
-\newcommand{\location}[1]{\color{headings}\raggedright\scshape\fontspec{Heiti TC Medium}\fontsize{10pt}{12pt}\selectfont {#1\\} \normalfont}
+\newcommand{\location}[1]{\color{headings}\raggedright\scshape\fontspec{Helvetica}\fontsize{10pt}{12pt}\selectfont {#1\\} \normalfont}
 
 % Section seperators command
 \newcommand{\sectionsep}[0]{\vspace{8pt}}

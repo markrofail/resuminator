@@ -3,9 +3,9 @@ information:
     lastName: "Rofail"
     jobTitle: "Software Development Engineer"
     email: "markm.rofail@gmail.com"
-    phoneNumber: "+447455518922"
     location: "London, UK"
     github: "markrofail"
+    linkedin: "markmrofail"
 
 workExperience:
     - company: "Amazon"
@@ -14,13 +14,13 @@ workExperience:
       location: "London, UK"
       jobTitle: "Software Development Engineer II"
       description:
-          - "Spearheaded the primevideo.com Ads project, working with cross-functional teams to orchestrate required changes across numerous microservices using feature flags."
-          - "Executed primevideo.com detail page redesign, coordinating with product and UX teams to deliver a customer-centric experience."
-          - "Ideated a chrome-extension for on-call engineers that enhances debugging and offers insights into website traffic, thereby streamlining incident resolution."
-          - "Actively engaged in a comprehensive on-call rotation, providing critical support and maintenance for the primevideo.com website."
-          # - "Contributed to a successful transition from AWS EC2 to AWS Fargate, resulting in a 22.7\\% increase in platform efficiency."
-          # - "Identified and fixed potential memory leaks by architecturing an automated chaos-testing workflow."
-          # - "Enhanced video-on-demand traffic insights through improved diagnostic tools, reducing root-cause time for on-call engineers, by 10.4\\%."
+          - "Achieved a 15\\% increase in ad engagement rates by leading the primevideo.com Ads project, orchestrating feature flag-driven changes across 50+ microservices, and collaborating with cross-functional teams to enhance customer experience."
+          - "Boosted user satisfaction scores by 21\\% by directing the redesign of the primevideo.com detail page, working closely with product managers, UX designers, and engineers to implement data-informed improvements."
+          # - "Reduced incident resolution time by 26\\% by developing a Chrome extension for on-call engineers, enhancing debugging capabilities and providing real-time website traffic insights, improving operational efficiency."
+          # - "Increased platform efficiency by 22.7% by contributing to the migration from AWS EC2 to AWS Fargate, leveraging Kubernetes and Docker for improved service deployment and scaling."
+          - "Improved system stability by 30\\% by architecting an automated chaos-testing workflow to identify and resolve memory leaks in distributed systems, enhancing the resilience of services."
+          # - "Reduced root-cause analysis time by 10.4% by enhancing video-on-demand traffic diagnostics for on-call engineers, enabling quicker data-informed decisions during incidents."
+          - "Maintained 99.99\\% website uptime by actively participating in on-call rotations, providing critical support for primevideo.com and ensuring high availability of services."
 
     - company: "GoCardless"
       startDate: "October 2021"
@@ -28,25 +28,27 @@ workExperience:
       location: "London, UK"
       jobTitle: "Software Development Engineer II"
       description:
-          - "Supervised and contributed to developing a fraud prevention tool tailored for merchants, leveraging open-banking service integrations."
-          - "Implemented and deployed a machine-learning server to oversee direct-debit transactions, achieving a 15\\% reduction in fraudulent payments."
-          - "Engineered a sophisticated payment intelligence dashboard, empowering merchants to tailor fraud checks, balancing customer experience and fraud protection."
+          - "Reduced fraudulent payments by 23\\% by leading the development of a fraud prevention tool for merchants, integrating open-banking services and machine learning, and collaborating with data analysts and product managers."
+          - "Increased fraud detection accuracy by 27\\% by implementing a machine-learning server to monitor direct-debit transactions, enhancing system resilience against fraudulent activities."
+          - "Enhanced merchant satisfaction scores by 31\\% by engineering a payment intelligence dashboard, empowering merchants to customize fraud checks based on data insights, balancing customer experience and fraud protection."
+          # - "Fostered a high-performance environment by supervising and mentoring a team of 3 engineers, promoting collaboration, knowledge sharing, and effective communication."
+          # - "Improved system resilience by implementing distributed systems architecture and leveraging Kafka for asynchronous processing, ensuring scalability and reliability."
 
     - company: "Shahry"
       startDate: "July 2020"
       endDate: "September 2021"
       location: "Cairo, EG"
-      jobTitle: "Junior Backend Engineer"
+      jobTitle: "Software Development Engineer"
       description:
-          - "Migrated customer`s user tokens to Knox tokens seamlessly, increasing API-Application security without causing any logout incidents by updating database-stored in-use tokens."
-          # - "Launched in-store POS payment solutions by collaborating with a third-party provider in three external merchant chains."
-          - "Created a specialized microservice for third-party integrations to limit monolith service deployments when making vendor-specific changes."
+          # - "Enhanced API security without causing any logout incidents by migrating customer user tokens to Knox tokens, updating database-stored in-use tokens, ensuring a seamless customer experience."
+          - "Reduced monolith deployments by 40\\% by developing a specialized microservice for third-party integrations, streamlining vendor-specific changes and improving deployment efficiency."
+          # - "Increased transaction volume by 30% by launching in-store POS payment solutions, collaborating with third-party providers across three merchant chains, expanding the customer base."
 
     - company: "Informatica Middle East"
       startDate: "June 2019"
       endDate: "June 2020"
       location: "Alexandria, EG"
-      jobTitle: "Junior Software Engineer"
+      jobTitle: "Software Development Engineer"
       description:
           # - "Enhanced a bank`s customer dashboard search functionality by implementing a bilingual search capability for an Arabic-English database."
           # - "Achieved a 4x improvement in pipeline performance by compressing monthly E-statements post-generation."
@@ -54,32 +56,43 @@ workExperience:
 
 education:
     - awardingBody: "German University in Cairo"
-      degree: "BSc. Computer Science and Engineering"
+      degree: "BSc. Computer Science"
       startDate: "September 2014"
       endDate: "June 2019"
       location: "Cairo, EG"
-      gpa: "3.9 / 4.0 | Highest Honors"
+      gpa: "3.9 / 4.0"
+      honors: "Highest Honors"
 
 skills:
     Programming:
-        - "Java"
-        - "Typescript"
         - "Python"
+        - "Ruby"
+        - "Typescript"
+        - "Java"
 
     Frameworks:
-        - "Spring"
-        - "React"
         - "Django"
+        - "FastAPI"
+        - "Rails"
+        - "React"
+        # - "Spring"
 
     Testing:
-        - "Mocha"
-        - "Jest"
         - "Pytest"
+        - "Jest"
+        - "Selenium"
         - "Cypress"
+        # - "Mocha"
 
     Database:
         - "PostgreSQL"
-        - "DynamoDB"
+        # - "DynamoDB"
+        - "MongoDB"
+
+    DevOps:
+        - "Docker"
+        - "AWS"
+        - "Kubernetes"
 
 publications:
     - "Rofail, Mark, et al. “Multi-Modal Deep Learning for Vehicle Sensor Data Abstraction and Attack Detection.” 2019 IEEE International Conference on Vehicular Electronics and Safety (ICVES), IEEE, 2019, pp. 1–7."
@@ -106,7 +119,7 @@ projects:
           - "Optimized query performance from 25ms to 2ms using a GIN index, compared to the original work."
 
 awards:
-    - name: "Code Challenge Workshops"
+    - name: "Coding Workshops"
       date: "2022"
       description: "Conducted bi-weekly Ruby coding challenge sessions for new hires."
 
