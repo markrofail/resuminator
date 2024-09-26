@@ -68,10 +68,7 @@
     \runsubsection{<%= work.jobTitle %>} \\
     \descript{<%= work.company %>}
 
-    <%= work.startDate %> – <%= work.endDate %>
-    \hfill
-    <%= work.location %>
-    \hspace{10pt} 
+    <%= work.startDate %> – <%= work.endDate %> | <%= work.location %>
 
     <% if (i == 0) { %>
     \vspace{\topsep} % Hacky fix for awkward extra vertical space
@@ -111,9 +108,9 @@
     % \vspace{\topsep} % Hacky fix for awkward extra vertical space
     % <% } %>
 
-    \location{<%= e.startDate %> - <%= e.endDate %> \hfill <%= e.location %>}
+    \location{<%= e.startDate %> - <%= e.endDate %> | <%= e.location %>}
     <% if (e.gpa) { %>
-        GPA: <%= e.gpa %> \hfill <%= e.honors %>
+        GPA: <%= e.gpa %> | <%= e.honors %>
     <% } %>
     \sectionsep
 <% }) -%>
