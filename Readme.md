@@ -18,4 +18,4 @@ Resuminator is a command-line tool that takes a structured YAML file as input, c
 
 <br/>
 
-![cv](./output/markrofail-cv_page_1.png)
+![cv](./output/preview.png)
