@@ -124,7 +124,7 @@
 
 \begin{tabular}{ll}
         <% Object.entries(skills).forEach(([skill, subSkills]) => { %>
-    \textbf{<%= skill %>} & <%= subSkills.join(", ") %> \\
+    <%= skill %> & <%= subSkills.join(", ") %> \\
     <% }) -%>
 \end{tabular}
 \sectionsep

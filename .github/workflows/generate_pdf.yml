@@ -14,13 +14,11 @@ jobs:
               with:
                   ref: ${{ github.head_ref }}
 
-            - name: Use Node.js
-              uses: actions/setup-node@v4
+            - uses: actions/setup-node@v4
               with:
                   node-version: "20.x"
 
             - run: npm ci
-
             - run: npm run generate:latex
 
             - uses: xu-cheng/latex-action@v3
@@ -29,8 +27,8 @@ jobs:
                   root_file: output.tex
                   latexmk_use_xelatex: true
 
-            - run: mv template/output.pdf "output/markrofail-cv.pdf"
-
+            - run: rm -rf output && mkdir output
+            - run: mv template/output.pdf "output/markrofail-$(date +"%Y-%m-%d").pdf"
             - run: npm run generate:png
 
             - uses: stefanzweifel/git-auto-commit-action@v5
