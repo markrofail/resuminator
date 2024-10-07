@@ -14,13 +14,13 @@ workExperience:
       location: "London, UK"
       jobTitle: "Software Development Engineer II"
       description:
-          - "Achieved a 15\\% increase in ad engagement rates by leading the primevideo.com Ads project, orchestrating feature flag-driven changes across 50+ microservices, and collaborating with cross-functional teams to enhance customer experience."
-          - "Boosted user satisfaction scores by 21\\% by directing the redesign of the primevideo.com detail page, working closely with product managers, UX designers, and engineers to implement data-informed improvements."
+          - "Led the primevideo.com Ads project, boosting ad engagement by 15\\% through feature flag-driven changes across 50+ microservices, enhancing customer experience."
+          - Drove the primevideo.com detail page redesign, achieving a 21\\% uplift in user satisfaction through strategic, data-informed improvements and close collaboration with product, UX, and engineering teams.
+          - "Architected an automated chaos-testing workflow, improving system stability by 30\\% and resolving memory leaks in distributed systems."
+          - "Ensured 99.99\\% uptime for primevideo.com by leading on-call rotations and delivering critical support for service availability."
           # - "Reduced incident resolution time by 26\\% by developing a Chrome extension for on-call engineers, enhancing debugging capabilities and providing real-time website traffic insights, improving operational efficiency."
           # - "Increased platform efficiency by 22.7% by contributing to the migration from AWS EC2 to AWS Fargate, leveraging Kubernetes and Docker for improved service deployment and scaling."
-          - "Improved system stability by 30\\% by architecting an automated chaos-testing workflow to identify and resolve memory leaks in distributed systems, enhancing the resilience of services."
           # - "Reduced root-cause analysis time by 10.4% by enhancing video-on-demand traffic diagnostics for on-call engineers, enabling quicker data-informed decisions during incidents."
-          - "Maintained 99.99\\% website uptime by actively participating in on-call rotations, providing critical support for primevideo.com and ensuring high availability of services."
 
     - company: "GoCardless"
       startDate: "October 2021"
@@ -28,9 +28,9 @@ workExperience:
       location: "London, UK"
       jobTitle: "Software Development Engineer II"
       description:
-          - "Reduced fraudulent payments by 23\\% by leading the development of a fraud prevention tool for merchants, integrating open-banking services and machine learning, and collaborating with data analysts and product managers."
-          - "Increased fraud detection accuracy by 27\\% by implementing a machine-learning server to monitor direct-debit transactions, enhancing system resilience against fraudulent activities."
-          - "Enhanced merchant satisfaction scores by 31\\% by engineering a payment intelligence dashboard, empowering merchants to customize fraud checks based on data insights, balancing customer experience and fraud protection."
+          - "Led development of a fraud prevention tool, reducing fraudulent payments by 23\\% through open-banking integration and machine learning, in collaboration with data analysts and product managers."
+          - "Enhanced fraud detection accuracy by 27\\% by deploying a machine-learning server to monitor direct-debit transactions, improving system resilience."
+          - "Engineered a payment intelligence dashboard, boosting merchant satisfaction by 31\\% by enabling customized fraud checks based on data insights."
           # - "Fostered a high-performance environment by supervising and mentoring a team of 3 engineers, promoting collaboration, knowledge sharing, and effective communication."
           # - "Improved system resilience by implementing distributed systems architecture and leveraging Kafka for asynchronous processing, ensuring scalability and reliability."
 
@@ -40,9 +40,9 @@ workExperience:
       location: "Cairo, EG"
       jobTitle: "Software Development Engineer"
       description:
-          # - "Enhanced API security without causing any logout incidents by migrating customer user tokens to Knox tokens, updating database-stored in-use tokens, ensuring a seamless customer experience."
-          - "Reduced monolith deployments by 40\\% by developing a specialized microservice for third-party integrations, streamlining vendor-specific changes and improving deployment efficiency."
-          # - "Increased transaction volume by 30% by launching in-store POS payment solutions, collaborating with third-party providers across three merchant chains, expanding the customer base."
+          # - "Boosted API security by migrating to Knox tokens, ensuring zero logout incidents and a seamless user experience."
+          - "Reduced monolith deployments by 40\\% by building a microservice for third-party integrations, streamlining vendor-specific updates and enhancing deployment efficiency."
+          # - "Increased transaction volume by 30\\% by launching in-store POS payment solutions, collaborating with third-party providers across three merchant chains, expanding the customer base."
 
     - company: "Informatica Middle East"
       startDate: "June 2019"
@@ -123,9 +123,9 @@ awards:
       date: "2022"
       description: "Conducted bi-weekly Ruby coding challenge sessions for new hires."
 
-    # - name: "Best Hackathon Project"
-    #   date: "2022"
-    #   description: "Developed a Slack-bot to capture individual achievements to streamline referencing during performance evaluations."
+    - name: "Best Hackathon Project"
+      date: "2022"
+      description: "Developed a Slack-bot to capture individual achievements to streamline referencing during performance evaluations."
 
     - name: "Google GSOC Mentor"
       date: "2021"
