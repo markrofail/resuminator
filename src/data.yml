@@ -15,7 +15,7 @@ workExperience:
       jobTitle: "Software Development Engineer II"
       description:
           - "Led the primevideo.com Ads project, boosting ad engagement by 15\\% through feature flag-driven changes across 50+ microservices, enhancing customer experience."
-          - Drove the primevideo.com detail page redesign, achieving a 21\\% uplift in user satisfaction through strategic, data-informed improvements and close collaboration with product, UX, and engineering teams.
+          - "Drove the primevideo.com detail page redesign, achieving a 21\\% uplift in user satisfaction through strategic, data-informed improvements and close collaboration with product, UX, and engineering teams."
           - "Architected an automated chaos-testing workflow, improving system stability by 30\\% and resolving memory leaks in distributed systems."
           - "Ensured 99.99\\% uptime for primevideo.com by leading on-call rotations and delivering critical support for service availability."
           # - "Reduced incident resolution time by 26\\% by developing a Chrome extension for on-call engineers, enhancing debugging capabilities and providing real-time website traffic insights, improving operational efficiency."
