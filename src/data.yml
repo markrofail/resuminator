@@ -1,11 +1,13 @@
 information:
     firstName: "Mark"
     lastName: "Rofail"
-    jobTitle: "Software Development Engineer"
+    jobTitle: "Software Engineer"
     email: "markm.rofail@gmail.com"
     location: "London, UK"
     github: "markrofail"
     linkedin: "markmrofail"
+
+summary: "Software Engineer with 6+ years of experience building large-scale, user-facing platforms at Amazon, GoCardless, and high-growth startups. Skilled in TypeScript, React, and full-stack development, with a strong track record of leading cross-functional projects that improve developer experience, system reliability, and customer engagement."
 
 workExperience:
     - company: "Amazon"
@@ -14,10 +16,11 @@ workExperience:
       location: "London, UK"
       jobTitle: "Software Development Engineer II"
       description:
-          - "Led the primevideo.com Ads project, boosting ad engagement by 15\\% through feature flag-driven changes across 50+ microservices, enhancing customer experience."
-          - "Drove the primevideo.com detail page redesign, achieving a 21\\% uplift in user satisfaction through strategic, data-informed improvements and close collaboration with product, UX, and engineering teams."
-          - "Architected an automated chaos-testing workflow, improving system stability by 30\\% and resolving memory leaks in distributed systems."
-          - "Ensured 99.99\\% uptime for primevideo.com by leading on-call rotations and delivering critical support for service availability."
+          - "Drove the technical roadmap for the high-volume Prime Video detail page redesign, translating complex product requirements into a scalable roadmap for a 4-engineer team, resulting in a 21\\% uplift in user satisfaction."
+          - "Led the primevideo.com Ads platform project, overseeing integration across 50+ microservices using a feature-flag driven release strategy, which boosted ad engagement by 15\\%."
+          - "Architected and deployed a multi-region chaos-testing framework for Amazon Prime Video`s critical path, proactively resolving systemic memory leaks and achieving a 30\\% measurable improvement in distributed system stability."
+          - "Designed and launched a developer productivity suite—including internal debugging extensions and API-linked UI inspectors—reducing front-end investigation time by 40\\% and improving feature delivery velocity across teams."
+          # - "Ensured 99.99\\% uptime for primevideo.com by leading on-call rotations and delivering critical support for service availability."
           # - "Reduced incident resolution time by 26\\% by developing a Chrome extension for on-call engineers, enhancing debugging capabilities and providing real-time website traffic insights, improving operational efficiency."
           # - "Increased platform efficiency by 22.7% by contributing to the migration from AWS EC2 to AWS Fargate, leveraging Kubernetes and Docker for improved service deployment and scaling."
           # - "Reduced root-cause analysis time by 10.4% by enhancing video-on-demand traffic diagnostics for on-call engineers, enabling quicker data-informed decisions during incidents."
@@ -28,9 +31,10 @@ workExperience:
       location: "London, UK"
       jobTitle: "Software Development Engineer II"
       description:
-          - "Led development of a fraud prevention tool, reducing fraudulent payments by 23\\% through open-banking integration and machine learning, in collaboration with data analysts and product managers."
-          - "Enhanced fraud detection accuracy by 27\\% by deploying a machine-learning server to monitor direct-debit transactions, improving system resilience."
-          - "Engineered a payment intelligence dashboard, boosting merchant satisfaction by 31\\% by enabling customized fraud checks based on data insights."
+          - "Led the end-to-end design and implementation of a core fraud prevention service, leveraging machine learning models and open-banking data to reduce payment fraud by 23\\% across the platform."
+          # - "Engineered and scaled a machine-learning scoring server to monitor real-time direct-debit transactions, increasing fraud detection accuracy by 27\\%."
+          - "Drove merchant adoption by designing a payment intelligence dashboard , enabling custom, data-backed fraud checks and boosting merchant satisfaction by 31\\%."
+          - "Collaborated with product and data teams to align fraud-risk models with merchant UX flows, accelerating iteration cycles and reducing false-positive investigations by 18\\%."
           # - "Fostered a high-performance environment by supervising and mentoring a team of 3 engineers, promoting collaboration, knowledge sharing, and effective communication."
           # - "Improved system resilience by implementing distributed systems architecture and leveraging Kafka for asynchronous processing, ensuring scalability and reliability."
 
@@ -41,7 +45,7 @@ workExperience:
       jobTitle: "Software Development Engineer"
       description:
           # - "Boosted API security by migrating to Knox tokens, ensuring zero logout incidents and a seamless user experience."
-          - "Reduced monolith deployments by 40\\% by building a microservice for third-party integrations, streamlining vendor-specific updates and enhancing deployment efficiency."
+          # - "Reduced monolith deployments by 40\\% by building a microservice for third-party integrations, streamlining vendor-specific updates and enhancing deployment efficiency."
           # - "Increased transaction volume by 30\\% by launching in-store POS payment solutions, collaborating with third-party providers across three merchant chains, expanding the customer base."
 
     - company: "Informatica Middle East"
@@ -78,21 +82,20 @@ skills:
         # - "Spring"
 
     Testing:
-        - "Pytest"
         - "Jest"
-        - "Selenium"
-        - "Cypress"
-        # - "Mocha"
+        - "PyTest"
+        - "Load"
+        - "Chaos Testing"
 
     Database:
+        - "Redis"
+        - "DynamoDB"
         - "PostgreSQL"
-        # - "DynamoDB"
-        - "MongoDB"
 
     DevOps:
-        - "Docker"
-        - "AWS"
-        - "Kubernetes"
+        - "CloudFormation"
+        - "CI/CD"
+        - "Prometheus"
 
 publications:
     - "Rofail, Mark, et al. “Multi-Modal Deep Learning for Vehicle Sensor Data Abstraction and Attack Detection.” 2019 IEEE International Conference on Vehicular Electronics and Safety (ICVES), IEEE, 2019, pp. 1–7."
@@ -108,24 +111,23 @@ projects:
           - "Simulated camera-based attacks by manipulating the vehicle`s camera feed."
           - "Manufactured a multi-modal module to identify discrepancies between the vehicle`s image and LiDAR sensors."
 
-    - name: "PostgreSQL Contributor"
+    - name: "PostgreSQL Core Contributor"
       location: "Google Summer of Code"
       link: "https://www.postgresql.org/message-id/CAJvoCut7zELHnBSC8HrM6p-R6q-NiBN1STKhqnK5fPE-9%3DGq3g%40mail.gmail.com"
       technology:
           - "C"
           - "C++"
       description:
-          - "Enabled GIN index-scan between polymorphic array types by adding new operators."
-          - "Optimized query performance from 25ms to 2ms using a GIN index, compared to the original work."
+          - "Optimized index-scan performance from 25ms to 2ms by implementing GIN index-scan logic for polymorphic array types."
 
 awards:
     - name: "Coding Workshops"
       date: "2022"
-      description: "Conducted bi-weekly Ruby coding challenge sessions for new hires."
+      description: "Established and led bi-weekly technical workshops for new hires and junior engineers, accelerating ramp-up time for 15+ engineers."
 
-    - name: "Best Hackathon Project"
-      date: "2022"
-      description: "Developed a Slack-bot to capture individual achievements to streamline referencing during performance evaluations."
+    # - name: "Recognized for organizational efficiency"
+    #   date: "2022"
+    #   description: "Developed a Slack-bot to automate the capture of individual achievements, which was adopted by multiple teams to streamline performance evaluation referencing."
 
     - name: "Google GSOC Mentor"
       date: "2021"
@@ -135,9 +137,9 @@ awards:
       date: "2021"
       description: "Supervised three undergraduate students in their bachelor projects."
 
-    - name: "Hacktoberfest Award"
-      date: "2020"
-      description: "Successfully made for open-source contributions during October."
+    # - name: "Hacktoberfest Award"
+    #   date: "2020"
+    #   description: "Successfully made for open-source contributions during October."
 
     - name: "ICVES Best Paper Award"
       date: "2019"

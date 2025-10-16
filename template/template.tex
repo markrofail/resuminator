@@ -53,11 +53,22 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
+%     PROFESSIONAL SUMMARY
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+<% if (summary) { %>
+\section{Professional Summary}
+<%= summary %>
+\sectionsep
+<% } %>
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
 %     COLUMN ONE
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{minipage}[t]{0.56\textwidth} 
+\begin{minipage}[t]{0.56\textwidth}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %     EXPERIENCE
@@ -65,7 +76,7 @@
 
 \section{Experience}
 <% workExperience.forEach((work, i) => { %>
-    \runsubsection{<%= work.jobTitle %>} \\
+    \fontsize{12.1pt}{14.5pt}\selectfont <%= work.jobTitle %> \\
     \descript{<%= work.company %>}
 
     <%= work.startDate %> – <%= work.endDate %> | <%= work.location %>
@@ -74,35 +85,21 @@
     \vspace{\topsep} % Hacky fix for awkward extra vertical space
     <% } %>
 
+    \vspace{4pt}
+
     <% if (work.description) { %>
     \begin{tightemize}
     <%_ work.description.forEach(bulletPoint => { -%>
-        \item <%= bulletPoint %>
+        \item <%= bulletPoint.replace(/&/g, '\\&') %>
     <%_ }) -%>
     \end{tightemize}
+
     <% } %>
     \sectionsep
+    <% if (work !== workExperience[workExperience.length - 1]) { %>
+    \vspace{6pt}
+    <% } %>
 <% }) %>
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%     EDUCATION
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\section{Education} 
-<% education.forEach((e, i) => { %>
-    \runsubsection{<%= e.degree %>} \\
-    <%= e.awardingBody %>
-
-    % <% if (i == 0) { %>
-    % \vspace{\topsep} % Hacky fix for awkward extra vertical space
-    % <% } %>
-
-    \location{<%= e.startDate %> - <%= e.endDate %> | <%= e.location %>}
-    <% if (e.gpa) { %>
-        GPA: <%= e.gpa %> | <%= e.honors %>
-    <% } %>
-    \sectionsep
-<% }) -%>
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
@@ -131,10 +128,13 @@
 %     PROJECTS
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\vspace{-6pt}
+\vspace{-2pt}
 \section{Projects \& Publications}
 <% projects.forEach((project, i) => { %>
-    \href{<%- project.link %>}{\runsubsection{<%= project.location %>} \\ \location{<%= project.name %> \small\faExternalLink*}}
+    \href{<%- project.link %>}{\runsubsection{<%= project.location %>} 
+    \vspace{2pt}
+    \\ 
+    \location{<%= project.name %> \small\faExternalLink*}}
     Technologies: <%= project.technology.join(", ") %>
 
     <% if (i == 0) { %>
@@ -143,7 +143,7 @@
 
     \begin{tightemize}
     <%_ project.description.forEach(bulletPoint => { -%>
-    \item <%= bulletPoint %>
+    \item <%= bulletPoint.replace(/&/g, '\\&') %>
     <%_ }) -%>
     \end{tightemize}
 
@@ -151,15 +151,34 @@
 <% }) %>
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     EDUCATION
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Education}
+<% education.forEach((e, i) => { %>
+    \runsubsection{<%= e.degree %>} \\
+    <%= e.awardingBody %>
+
+    % <% if (i == 0) { %>
+    % \vspace{\topsep} % Hacky fix for awkward extra vertical space
+    % <% } %>
+
+    \location{<%= e.startDate %> - <%= e.endDate %> | <%= e.location %>}
+    <% if (e.gpa) { %>
+        GPA: <%= e.gpa %> | <%= e.honors %>
+    <% } %>
+    \sectionsep
+<% }) %>
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %     AWARDS
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\vspace{-6pt}
-\section{Leadership \& Awards} 
+\section{Leadership \& Awards}
 <%_ awards.forEach((award, i) => { -%>
     \runsubsection{<%= award.name -%>} - \location{<%= award.date %>}
 
-    <%= award.description %>
+    <%= award.description.replace(/&/g, '\\&') %>
 
     \sectionsep
 <% }) %>

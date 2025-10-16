@@ -9,7 +9,7 @@
 \LoadClass{article}
 
 % Package Imports
-\usepackage[hmargin=1.25cm, vmargin=0.75cm]{geometry}
+\usepackage[hmargin=1.0cm, vmargin=0.5cm]{geometry}
 \usepackage[hidelinks]{hyperref}
 \usepackage{fancyhdr}
 \usepackage{clrstrip}
@@ -52,15 +52,15 @@ Last Updated on
   \vspace{6pt}
   } 
 \raggedright{
-  \begin{colorstrip}{black}[inner=8pt]
-    \color{white}
+  \begin{colorstrip}{white}[inner=8pt]
+    \color{black}
     \fontsize{11pt}{14pt}\selectfont #4
   \end{colorstrip}
   }
 }
 
-% Section seperators 
-\titlespacing*{\section}{0pt}{0.1\baselineskip}{0.2\baselineskip}
+% Section seperators
+\titlespacing*{\section}{0pt}{0.05\baselineskip}{0.1\baselineskip}
 \titlespacing{\subsection}{0pt}{\parskip}{-\parskip}
 \titlespacing{\subsubsection}{0pt}{\parskip}{-\parskip}
 
@@ -76,15 +76,15 @@ Last Updated on
 \fontsize{12pt}{12pt}\selectfont\bfseries {#1} \normalfont}
 
 % Descriptors command
-\newcommand{\descript}[1]{\color{subheadings}\raggedright\scshape\fontsize{11pt}{13pt}\selectfont {#1 \\} \normalfont}
+\newcommand{\descript}[1]{\color{subheadings}\raggedright\bfseries\scshape\fontsize{11pt}{13pt}\selectfont {#1 \\} \normalfont}
 
 % Location command
 \newcommand{\location}[1]{\color{headings}\raggedright\scshape\fontsize{10pt}{12pt}\selectfont {#1\\} \normalfont}
 
 % Section seperators command
-\newcommand{\sectionsep}[0]{\vspace{8pt}}
+\newcommand{\sectionsep}[0]{\vspace{4pt}}
 
 % Bullet Lists with fewer gaps command
 \newenvironment{tightemize}{
-\vspace{-\topsep}\begin{itemize}\itemsep1pt \parskip0pt \parsep0pt}
+\vspace{-\topsep}\begin{itemize}[leftmargin=16pt, itemsep=0pt, parsep=0pt]}
 {\end{itemize}\vspace{-\topsep}}
