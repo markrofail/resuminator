@@ -76,7 +76,7 @@ Last Updated on
 \fontsize{12pt}{12pt}\selectfont\bfseries {#1} \normalfont}
 
 % Descriptors command
-\newcommand{\descript}[1]{\color{subheadings}\raggedright\bfseries\scshape\fontsize{11pt}{13pt}\selectfont {#1 \\} \normalfont}
+\newcommand{\descript}[1]{\color{subheadings}\raggedright\scshape\fontsize{11pt}{13pt}\selectfont {#1 \\} \normalfont}
 
 % Location command
 \newcommand{\location}[1]{\color{headings}\raggedright\scshape\fontsize{10pt}{12pt}\selectfont {#1\\} \normalfont}
@@ -85,6 +85,6 @@ Last Updated on
 \newcommand{\sectionsep}[0]{\vspace{4pt}}
 
 % Bullet Lists with fewer gaps command
-\newenvironment{tightemize}{
-\vspace{-\topsep}\begin{itemize}[leftmargin=16pt, itemsep=0pt, parsep=0pt]}
+\newenvironment{tightemize}[1][0pt]{
+\vspace{-\topsep}\begin{itemize}[leftmargin=16pt, itemsep=#1, parsep=0pt]}
 {\end{itemize}\vspace{-\topsep}}

@@ -76,8 +76,8 @@
 
 \section{Experience}
 <% workExperience.forEach((work, i) => { %>
-    \fontsize{12.1pt}{14.5pt}\selectfont <%= work.jobTitle %> \\
-    \descript{<%= work.company %>}
+    \fontsize{12.1pt}{14.5pt}\selectfont \textbf{<%= work.company %>} \\
+    \descript{<%= work.jobTitle %>}
 
     <%= work.startDate %> – <%= work.endDate %> | <%= work.location %>
 
@@ -88,11 +88,13 @@
     \vspace{4pt}
 
     <% if (work.description) { %>
-    \begin{tightemize}
+    {\linespread{1.15}\selectfont
+    \begin{tightemize}[2pt]
     <%_ work.description.forEach(bulletPoint => { -%>
-        \item <%= bulletPoint.replace(/&/g, '\\&') %>
+        \item <%= bulletPoint %>
     <%_ }) -%>
     \end{tightemize}
+    }
 
     <% } %>
     \sectionsep
@@ -143,7 +145,7 @@
 
     \begin{tightemize}
     <%_ project.description.forEach(bulletPoint => { -%>
-    \item <%= bulletPoint.replace(/&/g, '\\&') %>
+    \item <%= bulletPoint %>
     <%_ }) -%>
     \end{tightemize}
 
@@ -163,7 +165,7 @@
     % \vspace{\topsep} % Hacky fix for awkward extra vertical space
     % <% } %>
 
-    \location{<%= e.startDate %> - <%= e.endDate %> | <%= e.location %>}
+    \location{<%= e.startDate %> – <%= e.endDate %> | <%= e.location %>}
     <% if (e.gpa) { %>
         GPA: <%= e.gpa %> | <%= e.honors %>
     <% } %>
@@ -178,7 +180,7 @@
 <%_ awards.forEach((award, i) => { -%>
     \runsubsection{<%= award.name -%>} - \location{<%= award.date %>}
 
-    <%= award.description.replace(/&/g, '\\&') %>
+    <%= award.description %>
 
     \sectionsep
 <% }) %>
