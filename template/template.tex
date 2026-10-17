@@ -1,190 +1,79 @@
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Deedy - One Page Two Column Resume
-% LaTeX Template
-% Version 1.2 (16/9/2014)
-%
-% Original author:
-% Debarghya Das (http://debarghyadas.com)
-%
-% Original repository:
-% https://github.com/deedydas/Deedy-Resume
-%
-% IMPORTANT: THIS TEMPLATE NEEDS TO BE COMPILED WITH XeLaTeX
-%
-% This template uses several fonts not included with Windows/Linux by
-% default. If you get compilation errors saying a font is missing, find the line
-% on which the font is used and either change it to a font included with your
-% operating system or comment the line out to use the default font.
-% 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+<%_
+    // "September 2014" -> "Sep 2014"; "Present" is left alone
+    const short = (date) => date.replace(/^([A-Za-z]{3})[a-z]* /, "$1 ")
+    const year = (date) => date.split(" ").pop()
+    const hasItems = (list) => Array.isArray(list) && list.length > 0
+-%>
+\documentclass{resume}
 
+\hypersetup{
+    pdfauthor = {<%- information.firstName %> <%- information.lastName %>},
+    pdftitle  = {<%- information.firstName %> <%- information.lastName %> - CV},
+}
 
-\documentclass[]{curriculum-vitae}
-
-\pagestyle{fancy}
-\fancyhf{}
- 
 \begin{document}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%
-%     LAST UPDATED DATE
-%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% \lastupdated
+\cvheader{<%- information.firstName %>}{<%- information.lastName %>}{<%- information.jobTitle %>}{
+    \cvcontact[mailto:<%- information.email %>]{\faEnvelope}{<%- information.email %>}
+    \cvcontact{\faMapMarker*}{<%- information.location %>}
+    \cvcontact[https://github.com/<%- information.github %>]{\faGithub}{github.com/<%- information.github %>}
+    \cvcontact[https://www.linkedin.com/in/<%- information.linkedin %>]{\faLinkedin}{linkedin.com/in/<%- information.linkedin %>}
+}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%
-%     TITLE NAME
-%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\namesection
-    {<%= information.firstName %>}{<%= information.lastName %>}
-    {Software Development Engineer}
-    {
-        \faMapMarker*\hspace{6pt}<%= information.location %>
-        \hspace{20pt}
-        \href{mailto:<%= information.email %>}{\faEnvelope\hspace{6pt}<%= information.email %>}
-        \hspace{20pt}
-        \href{https://www.linkedin.com/in/<%= information.linkedin %>}{\faLinkedin\hspace{6pt}linkedin/<%= information.linkedin %>}
-        \hspace{20pt}
-        \href{https://github.com/<%= information.github %>}{\faGithub\hspace{6pt}github/<%= information.github %>}
-    }
+\begin{cvsidebar}
+    \cvsection{Technical Skills}
+<%_ Object.entries(skills).forEach(([group, items]) => { -%>
+    \cvskillgroup{<%- group %>}{<%- items.join("\\par ") %>}
+<%_ }) -%>
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%
-%     PROFESSIONAL SUMMARY
-%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-<% if (summary) { %>
-\section{Professional Summary}
-<%= summary %>
-\sectionsep
-<% } %>
+    \cvsection{Education}
+<%_ education.forEach((edu) => { -%>
+    \cvsideentry{<%- edu.degree %>}{<%- edu.awardingBody %>}{<%- year(edu.startDate) %> – <%- year(edu.endDate) %><%_ const extras = [edu.gpa && `GPA ${edu.gpa}`, edu.honors].filter(Boolean) _%><% if (extras.length) { %>\newline <%- extras.join(" · ") %><% } %>}
+<%_ }) -%>
+<%_ if (hasItems(locals.interests)) { -%>
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%
-%     COLUMN ONE
-%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    \cvsection{Interests / Hobbies}
+<%_ interests.forEach((interest) => { -%>
+    \cvsideparagraph{<%- typeof interest === "string" ? interest : `\\textbf{${interest.name}:} ${interest.description}` %>}
+<%_ }) -%>
+<%_ } -%>
+\end{cvsidebar}
 
-\begin{minipage}[t]{0.56\textwidth}
+\begin{cvmain}
+    \cvsection{Professional Summary}
+    <%- summary %>
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%     EXPERIENCE
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    \cvsection{Work Experience}
+<%_ workExperience.forEach((job) => { -%>
+    \cvjob{<%- job.jobTitle %>}{<%- job.company %>\cvsep <%- short(job.startDate) %> – <%- short(job.endDate) %>}
+<%_ if (job.summary) { -%>
+    \cvjobsummary{<%- job.summary %>}
+<%_ } -%>
+<%_ if (hasItems(job.description)) { -%>
+    \begin{cvbullets}
+<%_ job.description.forEach((line) => { -%>
+        \item <%- line %>
+<%_ }) -%>
+    \end{cvbullets}
+<%_ } -%>
+<%_ }) -%>
 
-\section{Experience}
-<% workExperience.forEach((work, i) => { %>
-    \fontsize{12.1pt}{14.5pt}\selectfont \textbf{<%= work.company %>} \\
-    \descript{<%= work.jobTitle %>}
+    \cvsection{Projects}
+<%_ projects.forEach((project) => { -%>
+    \cvproject[<%- project.link || "" %>]{<%- project.name %>}{<%- project.location %>\cvsep <%- project.technology.join(" · ") %>}
+<%_ if (project.summary) { -%>
+    \cvjobsummary{<%- project.summary %>}
+<%_ } -%>
+<%_ if (hasItems(project.description)) { -%>
+    \begin{cvbullets}
+<%_ project.description.forEach((line) => { -%>
+        \item <%- line %>
+<%_ }) -%>
+    \end{cvbullets}
+<%_ } -%>
+<%_ }) -%>
+\end{cvmain}
 
-    <%= work.startDate %> – <%= work.endDate %> | <%= work.location %>
+\cvbody
 
-    <% if (i == 0) { %>
-    \vspace{\topsep} % Hacky fix for awkward extra vertical space
-    <% } %>
-
-    \vspace{4pt}
-
-    <% if (work.description) { %>
-    {\linespread{1.15}\selectfont
-    \begin{tightemize}[2pt]
-    <%_ work.description.forEach(bulletPoint => { -%>
-        \item <%= bulletPoint %>
-    <%_ }) -%>
-    \end{tightemize}
-    }
-
-    <% } %>
-    \sectionsep
-    <% if (work !== workExperience[workExperience.length - 1]) { %>
-    \vspace{6pt}
-    <% } %>
-<% }) %>
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%
-%     COLUMN TWO
-%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\end{minipage} 
-\hfill
-\begin{minipage}[t]{0.4\textwidth} 
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%     SKILLS
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\section{Skills}
-
-\begin{tabular}{ll}
-        <% Object.entries(skills).forEach(([skill, subSkills]) => { %>
-    <%= skill %> & <%= subSkills.join(", ") %> \\
-    <% }) -%>
-\end{tabular}
-\sectionsep
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%     PROJECTS
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\vspace{-2pt}
-\section{Projects \& Publications}
-<% projects.forEach((project, i) => { %>
-    \href{<%- project.link %>}{\runsubsection{<%= project.location %>} 
-    \vspace{2pt}
-    \\ 
-    \location{<%= project.name %> \small\faExternalLink*}}
-    Technologies: <%= project.technology.join(", ") %>
-
-    <% if (i == 0) { %>
-    \vspace{\topsep} % Hacky fix for awkward extra vertical space
-    <% } %>
-
-    \begin{tightemize}
-    <%_ project.description.forEach(bulletPoint => { -%>
-    \item <%= bulletPoint %>
-    <%_ }) -%>
-    \end{tightemize}
-
-    \sectionsep
-<% }) %>
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%     EDUCATION
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\section{Education}
-<% education.forEach((e, i) => { %>
-    \runsubsection{<%= e.degree %>} \\
-    <%= e.awardingBody %>
-
-    % <% if (i == 0) { %>
-    % \vspace{\topsep} % Hacky fix for awkward extra vertical space
-    % <% } %>
-
-    \location{<%= e.startDate %> – <%= e.endDate %> | <%= e.location %>}
-    <% if (e.gpa) { %>
-        GPA: <%= e.gpa %> | <%= e.honors %>
-    <% } %>
-    \sectionsep
-<% }) %>
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%     AWARDS
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\section{Leadership \& Awards}
-<%_ awards.forEach((award, i) => { -%>
-    \runsubsection{<%= award.name -%>} - \location{<%= award.date %>}
-
-    <%= award.description %>
-
-    \sectionsep
-<% }) %>
-
-\end{minipage} 
-\end{document}  
-\documentclass[]{article}
+\end{document}

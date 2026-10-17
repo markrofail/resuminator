@@ -31,7 +31,8 @@ function escapeObject(obj: any): any {
     } else if (obj !== null && typeof obj === "object") {
         const newObj: any = {}
         for (const key in obj) {
-            newObj[key] = escapeObject(obj[key])
+            // keys are escaped too: skill group names are rendered as text
+            newObj[escapeLatex(key)] = escapeObject(obj[key])
         }
         return newObj
     }

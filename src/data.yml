@@ -1,60 +1,85 @@
 information:
     firstName: "Mark"
     lastName: "Rofail"
-    jobTitle: "Senior Fullstack Engineer"
+    jobTitle: "Senior Software Engineer"
     email: "markm.rofail@gmail.com"
     location: "London, UK"
     github: "markrofail"
     linkedin: "markmrofail"
 
-summary: "Senior full-stack engineer with 6+ years building high-scale products in streaming, banking, and payments, from resilient backend services to polished React experiences. I unblock teams, improve reliability through chaos and load testing, and ship products that reduce fraud and drive measurable impact."
+summary: "Full-stack Senior Software Engineer with 7+ years of experience building developer tools, ML-driven services, and scalable products. Proven track record of taking complex technical initiatives from initial requirements through to production rollout. Recently focused on exploring Generative AI and LLM integrations through personal projects."
 
 workExperience:
     - company: "Stripe"
       startDate: "March 2026"
       endDate: "Present"
       location: "London, UK"
-      jobTitle: "SWE, Payouts Surfaces"
+      jobTitle: "Software Engineer, Payouts Surfaces"
+      summary: "Product engineer building merchant-facing dashboard flows and global payment integrations."
       description:
-          - "As Reliability Lead for Payouts Surfaces, cut post-deployment incidents by 35% with standardized pre-launch checks and reduced MTTA by 60% through synthetic monitoring."
-          - "Integrated 6 payment rails (Apple Pay, Google Pay, Crypto, ACH, RTP, SEPA) into global payouts, unlocking $150M in new processing volume through localized and instant settlement."
-          - "Led a zero-downtime migration of 50M+ ledger records from a legacy datastore to PostgreSQL with strict transactional guarantees, eliminating major technical debt."
+          - "Engineered a real-time fee-estimate service powering the payouts dashboard, providing immediate pricing transparency to merchants and driving a 12% increase in payout volume."
+          - "Led the product integration of 6 global payment rails (including Apple Pay, RTP, and SEPA), unlocking $150M in new transaction volume."
+          - "Served as Reliability Lead for the surfaces team, cutting post-deploy incidents by 35% via strict pre-launch checks and reducing MTTA by 60% through synthetic monitoring."
 
     - company: "Amazon"
       startDate: "November 2022"
       endDate: "March 2026"
       location: "London, UK"
-      jobTitle: "SWE, Prime Video Web"
+      jobTitle: "Software Engineer, Prime Video Web"
+      summary: "Full-stack engineer on primevideo.com: feature redesigns and widely adopted developer tools."
       description:
-          - "Drove the roadmap for the high-volume Prime Video detail page redesign, turning requirements into a plan for 4 engineers and lifting user satisfaction by 21%."
-          - "Built a developer productivity suite of debugging extensions and API-linked UI inspectors, cutting front-end investigation time by 40% and speeding team delivery."
-          - "Led the primevideo.com Ads integration across 50+ microservices via feature-flag-driven releases, boosting ad engagement by 15% while tightly controlling risk."
-          - "Architected a multi-region chaos testing framework for Prime Video's critical path, resolving systemic memory leaks and improving distributed system stability by 30%."
+          - "Engineered custom developer tooling (including Chrome extensions and UI inspectors) adopted across multiple teams, enhancing real-time diagnostics and cutting debug time by 40%."
+          - "Drove the detail page redesign from initial product requirements through to a technical execution plan for 4 engineers, lifting user satisfaction by 21%."
+          - "Led a complex Ads integration across 50+ services, collaborating across teams to de-risk the rollout with feature flags and increasing ad engagement by 35%."
+          # other points from git history, deduplicated (not on the CV):
+          # - "Architected a multi-region chaos testing framework for Prime Video's critical path, resolving systemic memory leaks and improving distributed system stability by 30%."
+          # - "Ensured 99.99% uptime for primevideo.com by leading on-call rotations and delivering critical support for service availability."
+          # - "Reduced incident resolution time by 26% by developing a Chrome extension for on-call engineers, enhancing debugging capabilities and providing real-time website traffic insights, improving operational efficiency."
+          # - "Increased platform efficiency by 22.7% by contributing to the migration from AWS EC2 to AWS Fargate, leveraging Kubernetes and Docker for improved service deployment and scaling."
+          # - "Reduced root-cause analysis time by 10.4% by enhancing video-on-demand traffic diagnostics for on-call engineers, enabling quicker data-informed decisions during incidents."
 
     - company: "GoCardless"
       startDate: "October 2021"
       endDate: "October 2022"
       location: "London, UK"
-      jobTitle: "SWE, Payments Intelligence"
+      jobTitle: "Software Engineer, Payments Intelligence"
+      summary: "Built self-serve fraud prevention for merchants: dashboards and real-time ML scoring."
       description:
           ""
-          #   - "Led the end to end design and implementation of a core fraud prevention service, using machine learning models and open banking data to reduce payment fraud by 23% across the platform."
-          #   - "Drove merchant adoption by designing a payment intelligence dashboard that enabled custom, data backed fraud checks and improved merchant satisfaction by 31%."
-          #   - "Collaborated with product and data teams to align fraud risk models with merchant UX flows, accelerating iteration cycles and reducing false positive investigations by 18%."
+          # - "Led end-to-end build of an ML fraud prevention service on open-banking data, cutting payment fraud 23%."
+          # - "Built a self-serve dashboard solo for merchants to set their own fraud checks, raising satisfaction 31%."
+          # dropped for the role summary line:
+          # - "Worked with product and data teams to fit fraud models to merchant UX, cutting false-positive investigations 18%."
+          # other points from git history, deduplicated (not on the CV):
+          # - "Engineered and scaled a machine-learning scoring server to monitor real-time direct-debit transactions, increasing fraud detection accuracy by 27%."
+          # - "Fostered a high-performance environment by supervising and mentoring a team of 3 engineers, promoting collaboration, knowledge sharing, and effective communication."
+          # - "Improved system resilience by implementing distributed systems architecture and leveraging Kafka for asynchronous processing, ensuring scalability and reliability."
 
-    - company: "Shahry"
+    - company: "shahry.app"
       startDate: "July 2020"
       endDate: "September 2021"
       location: "Cairo, EG"
-      jobTitle: "Software Development Engineer"
-      description: ""
+      jobTitle: "Software Engineer, External Integrations"
+      summary: "Founded the external integrations team, building POS payment flows for major merchant chains."
+      description:
+          ""
+          # other points from git history, deduplicated (not on the CV):
+          # - "Boosted API security by migrating to Knox tokens, ensuring zero logout incidents and a seamless user experience."
+          # - "Reduced monolith deployments by 40% by building a microservice for third-party integrations, streamlining vendor-specific updates and enhancing deployment efficiency."
+          # - "Increased transaction volume by 30% by launching in-store POS payment solutions, collaborating with third-party providers across three merchant chains, expanding the customer base."
 
     - company: "Informatica Middle East"
       startDate: "June 2019"
       endDate: "June 2020"
       location: "Alexandria, EG"
-      jobTitle: "Software Development Engineer"
-      description: ""
+      jobTitle: "Software Engineer, Internal Tools"
+      summary: "Built full-stack internal tools and client-facing web apps for enterprise workflows."
+      description:
+          ""
+          # other points from git history, deduplicated (not on the CV):
+          # - "Enhanced a bank's customer dashboard search functionality by implementing a bilingual search capability for an Arabic-English database."
+          # - "Achieved a 4x improvement in pipeline performance by compressing monthly E-statements post-generation."
+          # - "Created an internal HR portal, reducing paperwork processing time by 20%."
 
 education:
     - awardingBody: "German University in Cairo"
@@ -66,51 +91,65 @@ education:
       honors: "Highest Honors"
 
 skills:
-    Programming:
+    Languages:
         - "Python"
         - "Ruby"
         - "TypeScript"
         - "Java"
-    Frameworks:
+        - "C"
+    Frameworks & Data:
+        - "Rails"
         - "Django"
         - "FastAPI"
-        - "Rails"
         - "React"
-    Testing:
-        - "Jest"
-        - "pytest"
-        - "Load"
-        - "Chaos Testing"
-    Database:
-        - "Redis"
-        - "DynamoDB"
         - "PostgreSQL"
-    DevOps:
-        - "CloudFormation"
+        - "DynamoDB"
+        - "Redis"
+    Infra & Testing:
         - "CI/CD"
+        - "Docker"
+        - "CloudFormation"
+        - "Load/Chaos Testing"
+        - "pytest"
+        - "Jest"
+    Observability:
         - "Prometheus"
+        - "Grafana"
+        - "CloudWatch"
+        - "LogScale"
+        - "OpenTelemetry"
 
 publications:
     - 'Rofail, Mark, et al. "Multi-Modal Deep Learning for Vehicle Sensor Data Abstraction and Attack Detection." 2019 IEEE International Conference on Vehicular Electronics and Safety (ICVES), IEEE, 2019, pp. 1–7.'
 
 projects:
+    - name: "Coptic-to-Latin AI Transliteration App"
+      location: "Personal Project"
+      technology:
+          - "Next.js"
+          - "React"
+          - "Tailwind CSS"
+          - "Gemini API"
+          - "Vercel"
+      summary: "Engineered a full-stack, user-facing Next.js application that integrates the Google Gemini API for real-time phonetic text transliteration. Architected a secure, serverless backend to handle optimized LLM prompting, API rate limits, and custom inference timeouts for a seamless user experience."
+
     - name: "Multi-Modal Vehicle Attack Detection"
-      location: "ICVES Publication"
+      location: "IEEE ICVES Publication"
       link: "https://ieeexplore.ieee.org/abstract/document/8906405"
       technology:
-          - "TensorFlow"
           - "Python"
-      description:
-          - "Simulated attacks by manipulating the vehicle's camera feed."
-          - "Built a multimodal module detecting discrepancies between image and LiDAR sensors."
-    - name: "PostgreSQL Core Contributor"
-      location: "Google Summer of Code"
-      link: "https://www.postgresql.org/message-id/CAJvoCut7zELHnBSC8HrM6p-R6q-NiBN1STKhqnK5fPE-9%3DGq3g%40mail.gmail.com"
-      technology:
-          - "C"
-          - "C++"
-      description:
-          - "Cut index scan time from 25ms to 2ms by implementing GIN index scans for polymorphic array types."
+          - "TensorFlow"
+      summary: "Authored research on autonomous vehicle security by developing a multimodal ML module that identifies discrepancies between image and LIDAR sensors. Engineered simulated attack scenarios using TensorFlow to detect real-time manipulation of vehicle camera feeds."
+
+    # removed from the CV to keep it to one page:
+    # - name: "PostgreSQL Core Contributor"
+    #   location: "Google Summer of Code"
+    #   link: "https://www.postgresql.org/message-id/CAJvoCut7zELHnBSC8HrM6p-R6q-NiBN1STKhqnK5fPE-9%3DGq3g%40mail.gmail.com"
+    #   technology:
+    #       - "C"
+    #       - "C++"
+    #   description:
+    #       - "Cut index scan time from 25ms to 2ms by implementing GIN (inverted index) scans for polymorphic array types."
 
 awards:
     - name: "Coding Workshops"
@@ -125,3 +164,13 @@ awards:
     - name: "ICVES Best Paper Award"
       date: "2019"
       description: "Best paper among 54 submissions."
+
+# 2-3 items, shown as bullets at the bottom of the sidebar; the section is hidden while empty.
+# Each item is either a plain string or a name (rendered bold) with a description.
+interests:
+    - name: "Lego"
+      description: "Avid collector and builder. Always happy to discuss my latest builds, though be warned I can talk about them for hours."
+    - name: "3D Printing"
+      description: "I love the trial and error of rapid prototyping; there is a unique satisfaction in designing custom parts and finally seeing everything fit together like a glove."
+    - name: "Home Automation"
+      description: "Currently tinkering with a Raspberry Pi to automate my house, starting with a smart thermostat and now figuring out how to automate the sprinklers."
