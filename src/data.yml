@@ -125,6 +125,7 @@ publications:
 projects:
     - name: "Coptic-to-Latin AI Transliteration App"
       location: "Personal Project"
+      link: "https://github.com/markrofail/coptish-transliterator"
       technology:
           - "Next.js"
           - "React"
